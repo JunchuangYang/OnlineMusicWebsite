@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'MusicWebsite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'music_db',
+        'NAME': 'music_db1',
         'USER':'root',
         'PASSWORD':'root',
         'HOST':'127.0.0.1',
@@ -138,3 +138,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
 os.path.join(BASE_DIR, "static"),
 ]
+
+AUTH_USER_MODEL = 'user.MyUser'
+
