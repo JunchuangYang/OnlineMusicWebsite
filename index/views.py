@@ -18,3 +18,6 @@ def indexView(request):
     all_ranking = [search_ranking, down_ranking]
 
     return render(request, 'index.html', locals())
+
+def page_not_found(request):
+    return render(request, 'error404.html',status=404)

@@ -26,3 +26,13 @@ urlpatterns = [
     path('user/', include('user.urls')),
 
 ]
+
+# 项目music的urls.py
+# 设置404，505错误代码
+from index import views
+handler404 = views.page_not_found
+handler500 = views.page_not_found
+
+
+
+
