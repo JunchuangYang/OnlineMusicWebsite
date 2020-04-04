@@ -115,7 +115,7 @@
                             {%endif %}
                             <span class="num">{{forloop.counter}}</span>
                             <a class="name" href="{% url 'play' list.song_id %}" target="play" >{{list.song_name}}</a>
-                            <a class="singer" href="javascript:;" target="_blank" >{{list.song_singer}}</a>
+                            <a class="singer" href="javascript:;" >{{list.song_singer}}</a>
                             </li>
                             {%endfor %}
                         </ul>
@@ -170,5 +170,5 @@
         </div>
     </div>
 </body>
-	<script data-main="{% static "js/play.js" %}" src="{% static "js/require.js" %}"></script>
+	<script data-main="{% static 'js/play.js' %}" src="{% static 'js/require.js' %}"></script>
 {% endblock  %}

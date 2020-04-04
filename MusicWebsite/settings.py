@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'play',
     'search',
     'comment',
+    'label',
 ]
 
 MIDDLEWARE = [
@@ -67,7 +68,9 @@ TEMPLATES = [
                   os.path.join(BASE_DIR, 'ranking/templates'),
                   os.path.join(BASE_DIR, 'user/templates'),
                   os.path.join(BASE_DIR, 'play/templates'),
-                  os.path.join(BASE_DIR, 'comment/templates'),],
+                  os.path.join(BASE_DIR, 'comment/templates'),
+                  os.path.join(BASE_DIR, 'label/templates'),],
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -27,6 +27,8 @@ class RankingList(ListView):
     # 设定模板文件
     template_name = 'ranking.html'
 
+    # 基于类视图的分页
+    paginate_by = 3
     # 查询变量song_info的数据
     def get_queryset(self):
         # 获取请求参数

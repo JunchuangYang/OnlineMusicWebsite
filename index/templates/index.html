@@ -44,9 +44,9 @@
             </div>
             <div class="category-nav-body">
                 <div id="J_CategoryItems" class="category-items">
-                {% for label in label_list  %}
+                {% for labels in label_list  %}
                     <div class="item" data-index="1"><h3>
-                        <a href="javascript:;">{{ label.label_name }}</a></h3>
+                        <a href="{% url 'label' label_id=labels.label_id  page=1 %}">{{ labels.label_name }}</a></h3>
                     </div>
                 {% endfor  %}
                 </div>

@@ -670,11 +670,11 @@ require(['jquery','com',"jquery.jplayer"], function ($,com){
         }else{
           url = songlist.find('li').eq(0).find('.name').attr('href');
         }
-      }else{
+      }else {
         com.msg('歌曲列表中只有一首歌曲！');
         return false;
       }
-      location.href = location.origin + '/' + url;
+      location.href = location.origin + url;
     }else if(run == 'cl_all'){
       if(songlist.find('li').length<=1)return;
       com.alert({
@@ -867,6 +867,7 @@ require(['jquery','com',"jquery.jplayer"], function ($,com){
           localStorage.playNext = liArr.eq(0).find('.name').attr('href');
         }
       }
+      alert(localStorage.playNext);
     }else if(run == 'single'){
       //单曲播放
       localStorage.playNext = liCur.find('.name').attr('href');
