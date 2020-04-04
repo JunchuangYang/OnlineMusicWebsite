@@ -14,7 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
+from django.views import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,7 +26,11 @@ urlpatterns = [
     path('comment/', include('comment.urls')),
     path('search/', include('search.urls')),
     path('user/', include('user.urls')),
-    path('label/',include('label.urls'))
+    path('label/',include('label.urls')),
+    # 设置项目上线的静态资源路径
+    re_path(r'^static/(?P<path>.*)$', static.serve,
+            {'document_root':settings.STATIC_ROOT,},
+            name = 'static'),
 
 ]
 

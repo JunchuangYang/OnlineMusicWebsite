@@ -23,9 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'kg*cgr&-6a*-x7i-jr)z7&97t%m4p4cd*@a@687%_kl80+qdo_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# 关闭DUBUG模型
+DEBUG = False
 
-ALLOWED_HOSTS = []
+# 允许所有域名访问
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -137,7 +139,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+# STATIC_ROOT设置项目上线后的使用的静态资源
 STATIC_URL = '/static/'
+STATIC_ROOT = 'd:/OnlineMusicWebsite/MusicWebsite/static/'
 STATICFILES_DIRS = [
 os.path.join(BASE_DIR, "static"),
 ]
