@@ -18,7 +18,7 @@ dev2 ： 讲项目部署到阿里云服务器上（uWSGI + Nginx + Ubuntu）
 
 **首页：**
 
-![](./picture/1.png)
+![](./picture/4.png)
 
 **播放页：**
 
